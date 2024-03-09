@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Generate your QR</title>
+
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+</head>
+<body>
+
+    <!----------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------
+                                            PRELOADER START
+        ------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------>
+
+            <div class="preloader">
+                <div class="spinner"></div>
+              </div>
+              <div class="content" style="display: none;">
+            </div>
+        <!----------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------
+                                            PRELOADER END
+         ------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------>
+
+
+    
+    <!-- yha se mera main section start  -->
+    <section>
+
+        <!-- yeh mura screen size leta h  -->
+        <div class="row justify-content-around box">
+
+            <!----------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------
+                                            left side box start
+            ------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------>
+            <div class="col-lg-7 main-box">
+                <h1>Generate Dynamic QR Code</h1>
+
+                <!-----------------------------------------------------------------------------------
+                                            left side section 1 start 
+                ------------------------------------------------------------------------------------>
+
+
+                <div class="form-row">
+
+                    <!-- URL / TEXT START -->
+                    <div class=" col-lg-9 qr-header">
+                        <label for="qr-text">Text/URL</label>
+                        <input type="text" class="form-control form-control-lg qrtext" id="qr-text" placeholder="Type your text or URL">
+                    </div>
+                    <!-- URL / TEXT END -->
+
+                    <!-- SELECT SIZE START -->
+                    <div class="col-lg-3">
+                        <label class="my-1 mr-2" for="sizes">Select Size</label>
+                        <select class="custom-select my-1 mr-sm-2" id="sizes">
+                                <option value="100">100x100</option>
+                                <option value="200">200x200</option>
+                                <option value="300">300x300</option>
+                                <option value="400">400x400</option>
+                                <!-- <option value="500">500x500</option> -->
+                                <!-- Add other options here -->
+                        </select>
+                    </div>
+                    <!-- SELECT SIZE END -->
+                </div>
+
+
+                <!-----------------------------------------------------------------------------------
+                                            left side section 1 end 
+                ------------------------------------------------------------------------------------>
+
+
+                <!-----------------------------------------------------------------------------------
+                                            left side section 2 start 
+                ------------------------------------------------------------------------------------>
+
+
+                <div class="form-row">
+                    
+                    <!-- CHOOSE IMAGE START  -->
+                    <div class="col-md-6">
+                        <label for="image">Upload Image</label>
+                        <input type="file" class="form-control" id="image">
+                    </div>
+                    <!-- CHOOSE IMAGE START  -->
+
+                    <!-- CHOOSE IMAGE MARGIN FROM REST OF STUFF START  -->
+                    <div class="col-md-6">
+                        <label for="margin">Image Margin</label>
+                        <input type="number" class="form-control" id="margin" value="0">
+                    </div>
+                    <!-- CHOOSE IMAGE MARGIN FROM REST OF STUFF END  -->
+                </div>
+
+
+               <!-----------------------------------------------------------------------------------
+                                            left side section 2 end 
+                ------------------------------------------------------------------------------------>
+
+                <!-----------------------------------------------------------------------------------
+                                            left side section 3 start 
+                ------------------------------------------------------------------------------------>
+
+                <div class="form-row">
+
+                    <!-- DOT TYPE START  -->
+                    <div class="col-lg-6">
+                        <label for="dot-type">QR Type</label>
+                        <select class="form-control" id="dot-type">
+                            <option value="square">Square</option>
+                            <option value="rounded">Rounded</option>
+                            <option value="dots">Dots</option>
+                            <option value="classy">Classy</option>
+                            <option value="classy-rounded">Classy-Rounded</option>
+                            <option value="extra-rounded">Extra-Rounded</option>
+                        <!-- Add other dot type options here -->
+                        </select>
+                    </div>
+                    <!-- DOT TYPE END  -->
+
+                    <!-- DOT COLOR START  -->
+                    <div class="col-lg-3">
+                        <label for="dot-color">QR Color</label>
+                         <input type="color" class="form-control color-box" id="dot-color" value="#000000">
+                    </div>
+                    <!-- DOT COLOR END  -->
+
+                    <!-- BG COLOR START  -->
+                    <div class="col-lg-3">
+                        <label for="bg-color">Background Color</label>
+                        <input type="color" class="form-control color-box" id="bg-color" value="#ffffff">
+                    </div>
+                    <!-- BG COLOR END  -->
+
+                </div>
+
+                <!-----------------------------------------------------------------------------------
+                                            left side section 3 end 
+                ------------------------------------------------------------------------------------>
+
+                <!-----------------------------------------------------------------------------------
+                                            left side section 4 START 
+                ------------------------------------------------------------------------------------>
+
+                <div class="form-row">
+
+                    <!-- CORNER BORDER TYPE START  -->
+                    <div class="col-lg-3">
+                        <label for="corner-square-type">Corner Square Type</label>
+                        <select class="form-control" id="corner-square-type">
+                            <option value="square">Square</option>
+                            <option value="rounded">Rounded</option>
+                            <option value="dot">Dots</option>
+                            <option value="extra-rounded">Extra-Rounded</option>
+                          <!-- Add other corner square type options here -->
+                        </select>
+                    </div>
+                    <!-- CORNER BORDER TYPE END  -->
+
+                    <!-- CORNER BORDER COLOR START  -->
+                    <div class="col-lg-3">
+                        <label for="corner-square-color">Corner Square color</label>
+                        <input class="form-control color-box-1" type="color" id="corners-square-color" value="#000000">
+                    </div>
+                    <!-- CORNER BORDER COLOR END  -->
+                    
+                    <!-- CORNER DOTS TYPE START  -->
+                    <div class="col-lg-3">
+                        <label for="corner-dot-type">Corner Dot Type</label>
+                        <select class="form-control" id="corner-dot-type">
+                            <option value="square">Square</option>
+                            <option value="rounded">Rounded</option>
+                            <option value="dot">Dots</option>
+                        <!-- Add other corner dot type options here -->
+                        </select>
+                    </div>
+                    <!-- CORNER DOTS TYPE END  -->
+
+                    <!-- CORNER DOTS COLOR START  -->
+                    <div class="col-lg-3">
+                        <label for="corner-dot-color">Corner Dot color</label>
+                        <input class="form-control color-box-1" type="color" id="corners-dot-color" value="#000000">
+                    </div>
+                    <!-- CORNER DOTS COLOR END  -->
+                </div>
+
+                <!-----------------------------------------------------------------------------------
+                                            left side section 4 END 
+                ------------------------------------------------------------------------------------>
+
+                <button type="submit" class="btn btn-primary subbt" id="subbtn">IT IS ALL AUTO GENERATED</button>
+            </div>
+
+           <!----------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------
+                                            left side box END
+            ------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------>
+
+            <!----------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------
+                                            RIGHT side box START
+            ------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------>
+
+
+            <div class="col-lg-5 main-box-right">
+                
+                <!-- QR CODE GENERATER START  -->
+                <div class="qr-body"></div>
+                <!-- QR CODE GENERATER END  -->
+
+                <!-- DOWNLOAD BUTTON START  -->
+                <a href="#" class="btn btn-primary downbt" id="downbtn">Download</a>
+                <!-- DOWNLOAD BUTTON END  -->
+
+                <!-- RESET BUTTON  -->
+                <button type="button" id="resetbtn" class="btn btn-secondary">Reset</button>
+
+            </div>
+
+
+            <!----------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------
+                                            RIGHT side box END
+            ------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------>
+            
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Sure06</h2>
+            </div>
+            <div class="col-md-6 sub-menu">
+               
+                    <a href="https://www.instagram.com/studyy_with_sure/?hl=en">
+                        <button><i class="fa-brands fa-instagram" style="color: #b326f6;"></i></button>
+                    
+                    <a href="https://github.com/Sarthak-Sure06">
+                        <button><i class="fa-brands fa-github" style="color: #b326f6;"></i></button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thesarthaksaxena/">
+                        <button><i class="fa-brands fa-linkedin-in" style="color: #b326f6;"></i></button>
+                    </a>
+                    <a href="https://twitter.com/sure_06_">
+                        <button><i class="fa-brands fa-x-twitter" style="color: #b326f6;"></i></button>
+                    </a>
+                
+            </div>
+          </div>
+      </footer>
+      
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-----------------------------------------------------------------------------------
+                                            
+------------------------------------------------------------------------------------>
