@@ -172,7 +172,7 @@ footer .sub-menu button{
 
 
 
-  @media screen and (max-width:600px) {
+  @media screen and (max-width:768px) {
 
     html{
         padding: 80px 30px;
@@ -256,3 +256,15 @@ footer .sub-menu button{
         left: 25%;
     }
 }
+
+@media screen and (max-width:1300px) {
+    .footer .sub-menu{
+        left: 25%;
+    }
+  }
+
+  @media screen and (max-width:1000px) {
+    .footer .sub-menu{
+        left: 15%;
+    }
+  }
