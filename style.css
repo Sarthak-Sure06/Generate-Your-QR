@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -168,3 +169,90 @@ footer .sub-menu button{
   @keyframes spin {
     to { transform: rotate(360deg); }
   }
+
+
+
+  @media screen and (max-width:600px) {
+
+    html{
+        padding: 80px 30px;
+        /* padding-top: 60px; */
+    }
+
+    .main-box{
+        padding: 10px 20px;
+    }
+    
+    .main-box-right{  
+        padding: 15px 10px;
+        margin-bottom: 10px;
+    }
+
+    .main-box .subbt{
+        font-size: 16px;
+    }
+    
+    .main-box-right .downbt{
+        font-size: 16px;
+        background-color: var(--btn-color);
+        border: none;
+        margin-left: 23%;
+        margin-bottom: 50px;
+    }
+
+    .main-box-right .reset{
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .qr-body img{
+        max-width: 100% !important;
+        max-height: 100% !important;
+        margin-block: 10px;
+        padding: 20px;
+        border: 0.5px solid var(--background-color);
+        border-radius: var(--border-radius);
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+    
+    .footer {
+        padding: 0; /* Adjust padding for smaller screens */
+        max-height: 60vh; /* Set maximum height for smaller screens */
+        overflow-y: auto; /* Enable vertical scrolling when content exceeds viewport height */
+    }
+
+    footer .row .sub-menu a{
+        margin-right: 20px;
+        font-size: 1rem;
+        text-decoration: none;
+        cursor: pointer !important;
+        border-radius: 2rem;
+    }
+    
+    /* button ko gol krne ke leye */
+    footer .sub-menu button{
+    
+        background-color: var(--home-ka-color);
+        /*display:block;*/
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+    }
+
+    footer .left-menu{
+        width: 100%;
+        margin-bottom: 0;
+        left: 34%;
+    }
+
+    footer .sub-menu{
+        width: 100%;
+        margin-bottom: 10px;
+        left: 25%;
+    }
+}
